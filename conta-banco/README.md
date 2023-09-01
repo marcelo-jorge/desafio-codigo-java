@@ -1,6 +1,6 @@
 ## Guia de Estudos
 
-Plataforma: [DIO - Digital Innovation One.](www.dio.me)
+Plataforma: [DIO - Digital Innovation One.](https://web.dio.me/home)
 
 Bootcamp: Santander Bootcamp 2023 - Backend Java.
 
