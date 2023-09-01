@@ -25,7 +25,7 @@ public class ContaTerminal {
         scanner.nextLine();//preciso esvaziar o buffer do teclado antes de atribuir para conseguir ler mais uma palavra
         
         System.out.println("Por favor, digite nome do cliente:");
-        nomeDoCliente = scanner.nextLine();
+        nomeDoCliente = scanner.nextLine();//permite que eu leia uma frase ou cadeia de caracteres.
                 
         System.out.println("Por favor, digite saldo da conta:");
         saldo = scanner.nextDouble();
