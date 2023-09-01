@@ -1,8 +1,11 @@
-//import da classe para realizar leitura no terminal
-
 import java.util.Locale;
 import java.util.Scanner;
 
+/** 
+ * @apiNote Simulando Uma Conta Bancária Através Do Terminal Console.
+ * @author Marcelo Bomfim
+ * 
+*/
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
 
@@ -13,7 +16,7 @@ public class ContaTerminal {
         Double saldo;
 
         // declaração do objeto scanner para realizar a leitura dos dados
-        //utilizei locale para permitir inseriri os dados exatamente como no desafio com ponto ao inves de virgula.
+        //utilizei useLocale para permitir inserir os dados exatamente como no desafio com ponto(.) ao inves de virgula(,).
         Scanner scanner = new Scanner(System.in).useLocale(Locale.ENGLISH);        
 
         System.out.println("Por favor, digite numero da conta:");
