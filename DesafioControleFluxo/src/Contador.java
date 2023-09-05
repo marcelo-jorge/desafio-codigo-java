@@ -11,6 +11,11 @@ public class Contador {
         System.out.println("digite o segundo numero inteiro maior: ");
         int n2 = scanner.nextInt();
 
+        try {
+            contar(n1, n2);            
+        } catch (ParametrosInvalidosException pie) {
+            System.out.println(pie.getMessage());
+        }
         
     }
 
