@@ -4,8 +4,6 @@ Plataforma: [DIO - Digital Innovation One.](https://web.dio.me/home)
 
 Bootcamp: Santander Bootcamp 2023 - Backend Java.
 
-Curso: Simulando Uma Conta Bancária Através Do Terminal/Console.
-
 #### Autores
 - [Gleyson Sampaio](https://github.com/glysns)
 
