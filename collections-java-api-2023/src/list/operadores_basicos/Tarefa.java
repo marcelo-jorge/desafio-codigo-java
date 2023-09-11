@@ -10,10 +10,12 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
+    // obter o atributo descricao
     public String getDescricao(){
         return descricao;
     }
 
+    //para ser usado na impressão da classe
     @Override
     public String toString(){
         return descricao;
