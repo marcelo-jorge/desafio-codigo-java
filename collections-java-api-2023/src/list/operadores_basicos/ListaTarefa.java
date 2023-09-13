@@ -53,4 +53,26 @@ public class ListaTarefa {
         }
     } 
 
+    //testando codigo
+    public static void main(String[] args){
+
+        ListaTarefa listaTarefa = new ListaTarefa();
+
+        //metodo adicionar nova tarefa
+        listaTarefa.adcionarTarefa("tarefa 1");
+        listaTarefa.adcionarTarefa("tarefa 2");
+        listaTarefa.adcionarTarefa("tarefa 3");
+        listaTarefa.adcionarTarefa("tarefa 4");
+        System.out.println("numero de tarefas na lista: " + listaTarefa.obterNumeroTotalTarefas());
+
+        //metodo remover nova tarefa
+        listaTarefa.removerTarefa("tarefa 3");
+        listaTarefa.removerTarefa("tarefa 1");
+        
+        //metodo total de  tarefas
+        System.out.println("numero de tarefas na lista: " + listaTarefa.obterNumeroTotalTarefas());
+
+        //metodo descrição das tarefas
+        listaTarefa.obterDescricoesTarefas();
+    }
 }
