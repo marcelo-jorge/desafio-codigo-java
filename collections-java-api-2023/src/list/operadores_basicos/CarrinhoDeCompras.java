@@ -28,7 +28,7 @@ public class CarrinhoDeCompras {
                     removerTodos.add(item);
                 }                            
             }
-            System.out.println("Removendo todos os " + nome + " encontrados no Carrinho.");
+            System.out.println("Removendo todos os itens " + nome + " encontrados no Carrinho.");
             carrinhoDeCompras.removeAll(removerTodos);
         }else{
             System.out.println("Carrinho Vazio");
@@ -63,15 +63,15 @@ public class CarrinhoDeCompras {
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
 
         //adicionarItem
-        carrinhoDeCompras.adcionarItem("marcelo", 50.50, 20);
-        carrinhoDeCompras.adcionarItem("ana", 40, 30);
-        carrinhoDeCompras.adcionarItem("amanda", 35.8, 15);
-        carrinhoDeCompras.adcionarItem("marcelo", 100, 2);        
+        carrinhoDeCompras.adcionarItem("bola", 50.50, 20);
+        carrinhoDeCompras.adcionarItem("chupeta", 40, 30);
+        carrinhoDeCompras.adcionarItem("blusa", 35.8, 15);
+        carrinhoDeCompras.adcionarItem("chupeta", 100, 2);        
         carrinhoDeCompras.exibirItens();
         System.out.println("Valor total do carrinho R$: " + carrinhoDeCompras.calcularValorTotal());
         
         //removerItem
-        carrinhoDeCompras.removerItem("marcelo");
+        carrinhoDeCompras.removerItem("blusa");
 
         //calcularValorTotal e exibir itens
         carrinhoDeCompras.exibirItens();
