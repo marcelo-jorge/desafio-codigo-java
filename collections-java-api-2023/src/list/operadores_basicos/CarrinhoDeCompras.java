@@ -14,6 +14,7 @@ public class CarrinhoDeCompras {
     //adicionarItem(String nome, double preco, int quantidade)
     public void adcionarItem(String nome,double preco, int quantidade){
         carrinhoDeCompras.add(new Item(nome, preco, quantidade));
+        System.out.println("adicionando " + nome + " no carrinho.");
     }
 
     //removerItem(String nome)
@@ -50,6 +51,7 @@ public class CarrinhoDeCompras {
         if(carrinhoDeCompras.isEmpty()){
             System.out.println("Carrinho Vazio");            
         }else{
+            System.out.println("Lista de intens do carrinho:");
             System.out.println(carrinhoDeCompras);
         }
         
