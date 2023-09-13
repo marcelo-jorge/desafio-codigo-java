@@ -73,6 +73,6 @@ public class ListaTarefa {
         System.out.println("numero de tarefas na lista: " + listaTarefa.obterNumeroTotalTarefas());
 
         //metodo descrição das tarefas
-        listaTarefa.obterDescricoesTarefas();
+        listaTarefa.obterDescricoesTarefas();        
     }
 }

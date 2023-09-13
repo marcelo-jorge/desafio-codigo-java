@@ -5,10 +5,10 @@ import java.util.List;
 
 public class CatalagoLivros {
 
-    List<Livro> catalagodeLivros;
+    private List<Livro> catalagodeLivros;
 
     public CatalagoLivros(){
-        catalagodeLivros = new ArrayList<>();
+        this.catalagodeLivros = new ArrayList<>();
     }
 
     //Adiciona um livro ao catálogo.
@@ -68,6 +68,24 @@ public class CatalagoLivros {
         return livroPesquisarPorTitulo;
     }
 
+    public void findAll(){
+        System.out.println(catalagodeLivros);
+    }
+
+    public static void main(String[] args){
+        //testando a classe
+        CatalagoLivros catalagoLivros = new CatalagoLivros();
+
+        //adcionando livros
+        catalagoLivros.adicionarLivro("titulo 1", "autor 1", 2020);
+        catalagoLivros.adicionarLivro("titulo 1", "autor 2", 2021);
+        catalagoLivros.adicionarLivro("titulo 2", "autor 2", 2022);
+        catalagoLivros.adicionarLivro("titulo 3", "autor 3", 2023);
+        catalagoLivros.adicionarLivro("titulo 4", "autor 4", 2024);
+        catalagoLivros.adicionarLivro("titulo 5", "autor 5", 2000);
+
+        catalagoLivros.findAll();
+    }
 }
 
 
