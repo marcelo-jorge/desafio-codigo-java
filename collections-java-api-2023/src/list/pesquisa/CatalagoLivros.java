@@ -59,6 +59,7 @@ public class CatalagoLivros {
             for(Livro livro: catalagodeLivros){
                 if(livro.getTitulo().equalsIgnoreCase(titulo)){
                     livroPesquisarPorTitulo = livro;
+                    break;
                 }
             }
         }else{
@@ -85,6 +86,16 @@ public class CatalagoLivros {
         catalagoLivros.adicionarLivro("titulo 5", "autor 5", 2000);
 
         catalagoLivros.findAll();
+
+        //Pesquisa livros por autor e retorna uma lista com os livros encontrados.
+        System.out.println(catalagoLivros.pesquisarPorAutor("autor 4"));
+
+        //Pesquisa livros por título e retorna o primeiro livro encontrado.
+        System.out.println(catalagoLivros.pesquisarPorTitulo("titulo 1"));
+
+        //Pesquisa livros publicados em um determinado intervalo de anos e retorna uma lista com os livros encontrados.
+        System.out.println(catalagoLivros.pesquisarPorIntervaloAnos(2022, 2024));
+        
     }
 }
 
