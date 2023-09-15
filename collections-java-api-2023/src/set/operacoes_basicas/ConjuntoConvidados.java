@@ -31,5 +31,26 @@ public class ConjuntoConvidados {
     public void exibirConvidados(){
         System.out.println(conjutoConvidados);
     }
+
+    public static void main(String[] args) {
+        ConjuntoConvidados conjuntoConvidados = new ConjuntoConvidados();
+
+        //adcionar
+        conjuntoConvidados.adcionarConvidado("Marcelo", 111);
+        conjuntoConvidados.adcionarConvidado("Marcus", 222);
+        conjuntoConvidados.adcionarConvidado("Claudio", 333);
+        conjuntoConvidados.adcionarConvidado("Jose", 333);
+        conjuntoConvidados.adcionarConvidado("Abreu", 444);
+        conjuntoConvidados.exibirConvidados();
+        
+
+        //remover
+
+
+        //contar
+
+
+        //exibir
+    }
     
 }
