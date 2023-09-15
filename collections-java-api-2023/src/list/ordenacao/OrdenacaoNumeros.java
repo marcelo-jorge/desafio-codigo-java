@@ -26,7 +26,7 @@ public class OrdenacaoNumeros {
     //ordenar descendente
     public List<Integer> ordenarDescendente(){
         List<Integer> listaDescendente = new ArrayList<>(listaDeInteiros);
-        Collections.sort(listaDescendente);
+        listaDescendente.sort(Collections.reverseOrder());
         return listaDescendente;
     }
 
