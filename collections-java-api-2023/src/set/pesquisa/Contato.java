@@ -1,5 +1,7 @@
 package set.pesquisa;
 
+import java.util.Objects;
+
 public class Contato {
     
     private String nome;
@@ -25,15 +27,12 @@ public class Contato {
 
     @Override
     public String toString() {        
-        return "Contato [" + nome +","+ numero + "]/n";;
+        return "\nContato [" + nome +","+ numero + "]";
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-        return result;
+        return Objects.hash(getNome());
     }
 
     @Override
