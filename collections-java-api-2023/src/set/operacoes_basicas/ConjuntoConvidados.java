@@ -19,6 +19,7 @@ public class ConjuntoConvidados {
         for (Convidado convidado : conjutoConvidados) {
             if(convidado.getCodigoConvite() == codigoConvite){
                 conjutoConvidados.remove(convidado);
+                System.out.println("Removendo Convidado: " + convidado);
                 break;
             }
         }        
