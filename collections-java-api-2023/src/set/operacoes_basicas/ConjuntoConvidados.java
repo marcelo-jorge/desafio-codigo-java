@@ -24,8 +24,8 @@ public class ConjuntoConvidados {
         }        
     }
 
-    public void contarConvidados(){
-        System.out.println(conjutoConvidados.size());
+    public int contarConvidados(){
+        return conjutoConvidados.size();
     }
 
     public void exibirConvidados(){
@@ -43,11 +43,13 @@ public class ConjuntoConvidados {
         conjuntoConvidados.adcionarConvidado("Abreu", 444);
         conjuntoConvidados.exibirConvidados();
         
-
         //remover
-
+        conjuntoConvidados.removerConvidadoPorConvite(333);
+        conjuntoConvidados.exibirConvidados();
 
         //contar
+        System.out.println(conjuntoConvidados.contarConvidados());
+        
 
 
         //exibir
