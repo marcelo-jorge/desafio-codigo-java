@@ -48,11 +48,10 @@ public class ConjuntoConvidados {
         conjuntoConvidados.exibirConvidados();
 
         //contar
-        System.out.println(conjuntoConvidados.contarConvidados());
+        System.out.println("Quantidade de Convidados: " + conjuntoConvidados.contarConvidados());
         
-
-
         //exibir
+        conjuntoConvidados.exibirConvidados();
     }
     
 }
