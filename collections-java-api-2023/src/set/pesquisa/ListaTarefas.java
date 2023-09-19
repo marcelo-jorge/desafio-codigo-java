@@ -94,14 +94,20 @@ public class ListaTarefas {
 
     // marcar tarefa pendente
     public void marcarTarefaPendente(String descricao){
+        boolean tarefaNaoEncontrada = true;
+
         if(!tarefaSet.isEmpty()){
             for (Tarefa tarefa : tarefaSet) {
                 if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
                     tarefa.setConcluido(false);
                     System.out.println("tarefa marcada como pendente: " + tarefa);
+                    tarefaNaoEncontrada = false;
                     break;
                 }
             }
+
+            if(tarefaNaoEncontrada)
+            System.out.println("Tarefa não Encontrada");
         }else{
             System.out.println("Lista vazia!");
         }
