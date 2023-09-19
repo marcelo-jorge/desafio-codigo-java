@@ -85,6 +85,7 @@ public class ListaTarefas {
             for (Tarefa tarefa : tarefaSet) {
                 if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
                     tarefa.setConcluido(true);
+                    System.out.println(tarefa + " Marcada como concluida.");
                 }
             }
         }else{
@@ -148,6 +149,7 @@ public class ListaTarefas {
     listaTarefas.marcarTarefaConcluida("Estudar Java");
 
     // Obtendo tarefas concluídas
+    System.out.println("Lista de Tarefas concluidas:");
     System.out.println(listaTarefas.obterTarefasConcluidas());
 
     // Marcando tarefas como pendentes
