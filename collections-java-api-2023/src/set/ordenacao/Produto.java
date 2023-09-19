@@ -1,5 +1,6 @@
 package set.ordenacao;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Produto implements Comparable<Produto>{
@@ -58,5 +59,14 @@ public class Produto implements Comparable<Produto>{
     @Override
     public int compareTo(Produto p) {
         return nome.compareToIgnoreCase(p.getNome());
+    }
+
+    class ComparatorPorPreco implements Comparator<Produto>{
+
+        @Override
+        public int compare(Produto p1, Produto p2) {
+            return Double.compare(p1.getPreco(), p2.getPreco());
+        }
+        
     }
 }
