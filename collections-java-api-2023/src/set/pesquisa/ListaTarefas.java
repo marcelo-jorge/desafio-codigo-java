@@ -11,7 +11,9 @@ public class ListaTarefas {
     }
 
     //adcionar tarefa
-
+    public void adcionarTarefa(String descricao){
+        
+    }
 
     //remover tarefa
 
