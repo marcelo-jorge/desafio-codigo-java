@@ -12,14 +12,29 @@ public class ListaTarefas {
 
     //adcionar tarefa
     public void adcionarTarefa(String descricao){
-        
+        tarefaSet.add(new Tarefa(descricao));
     }
 
     //remover tarefa
+    public void removerTarefa(String descricao){
+        for (Tarefa tarefa : tarefaSet) {
+            if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
+                tarefaSet.remove(tarefa);
+                System.out.println("Removendo Tarefa: " + tarefa);
+                break;
+            }
+        }
+    }
 
     //exibir tarefa
+    public void exibirTarefa(){
+        System.out.println(tarefaSet);
+    }
 
     //contar tarefa
+    public int contarTarefa(){
+        return tarefaSet.size();
+    }
 
     //obter tarefas concluidas
 
