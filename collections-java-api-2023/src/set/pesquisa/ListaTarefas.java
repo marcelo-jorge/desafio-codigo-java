@@ -108,6 +108,9 @@ public class ListaTarefas {
     }
 
     //limpar lista tarefas
+    public void limparListaTarefas(){
+        tarefaSet.clear();
+    }
 
 
     
