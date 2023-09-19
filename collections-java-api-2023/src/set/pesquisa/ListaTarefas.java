@@ -80,6 +80,17 @@ public class ListaTarefas {
     }
 
     //marcar tarefa como conlcuida
+    public void marcarTarefaConcluida(String descricao){
+        if(!tarefaSet.isEmpty()){
+            for (Tarefa tarefa : tarefaSet) {
+                if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
+                    tarefa.setConcluido(true);
+                }
+            }
+        }else{
+            System.out.println("Lista Vazia!");
+        }
+    }
 
     // marcar tarefa pendente
 
