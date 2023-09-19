@@ -17,12 +17,17 @@ public class Tarefa {
         return concluido;
     }
 
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setConcluido(boolean concluido) {
+        this.concluido = concluido;
+    }
+
     @Override
     public String toString() {
         return "Tarefa = " + descricao + ", concluido= " + concluido;
     }
-
-    
-
     
 }
