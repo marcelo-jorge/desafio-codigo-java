@@ -67,6 +67,17 @@ public class ListaTarefas {
     }
 
     //obter tarefas pendentes
+    public Set<Tarefa> obterTarefasPendentes(){
+        Set<Tarefa> tarefasPendentes = new HashSet<>();
+
+        for (Tarefa tarefa : tarefasPendentes) {
+            if(!tarefa.isConcluido()){
+                tarefasPendentes.add(tarefa);
+            }
+        }
+
+        return tarefasPendentes;
+    }
 
     //marcar tarefa como conlcuida
 
