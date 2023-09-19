@@ -27,7 +27,7 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "Tarefa = " + descricao + ", concluido= " + concluido;
+        return "Tarefa: " + descricao + "," + concluido;
     }
     
 }
