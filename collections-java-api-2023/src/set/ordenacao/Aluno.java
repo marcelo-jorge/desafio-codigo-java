@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Aluno implements Comparable<Aluno>{
     private String nome;
-    private long matricula;
+    private Long matricula;
     private double nota;
     
-    public Aluno(String nome, long matricula, double nota){
+    public Aluno(String nome, Long matricula, double nota){
         this.nome = nome;
         this.matricula = matricula;
         this.nota = nota;
@@ -18,7 +18,7 @@ public class Aluno implements Comparable<Aluno>{
         return nome;
     }
 
-    public long getMatricula() {
+    public Long getMatricula() {
         return matricula;
     }
 
@@ -47,7 +47,7 @@ public class Aluno implements Comparable<Aluno>{
         Aluno other = (Aluno) obj;
         if (matricula != other.matricula)
             return false;
-        return true;
+        return Objects.equals(getMatricula(), other.getMatricula());
     }
 
     @Override
