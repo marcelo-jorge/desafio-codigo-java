@@ -30,7 +30,8 @@ public class CadastroProdutos {
     // exibir produto por preco
     public Set<Produto> exibirProdutosPorPreco(){
         Set<Produto> produtosPorPreco = new TreeSet<>(new ComparatorPorPreco());
-        if(!produtosPorPreco.isEmpty()){
+        
+        if(!produtoSet.isEmpty()){            
             produtosPorPreco.addAll(produtoSet);
             return produtosPorPreco;
         }else{
@@ -38,4 +39,27 @@ public class CadastroProdutos {
             return produtosPorPreco;
         }
     }
+
+    public static void main(String[] args) {
+        // Criando uma instância do CadastroProdutos
+        CadastroProdutos cadastroProdutos = new CadastroProdutos();
+    
+        // Adicionando produtos ao cadastro
+        cadastroProdutos.adicionarProduto(1L, "Smartphone", 1000d, 10);
+        cadastroProdutos.adicionarProduto(2L, "Notebook", 1500d, 5);
+        cadastroProdutos.adicionarProduto(1L, "Mouse", 30d, 20);
+        cadastroProdutos.adicionarProduto(4L, "Teclado", 50d, 15);
+    
+        // Exibindo todos os produtos no cadastro
+        System.out.println("Lista de Todos os produtos:");
+        System.out.println(cadastroProdutos.produtoSet);
+    
+        // Exibindo produtos ordenados por nome
+        System.out.println("Ordenação de produtos por nome:");
+        System.out.println(cadastroProdutos.exibirProdutosPorNome());
+    
+        // Exibindo produtos ordenados por preço
+        System.out.println("Ordenação de produtos por preco:");
+        System.out.println(cadastroProdutos.exibirProdutosPorPreco());
+      }
 }
