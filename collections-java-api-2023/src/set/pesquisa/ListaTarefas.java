@@ -17,18 +17,35 @@ public class ListaTarefas {
 
     //remover tarefa
     public void removerTarefa(String descricao){
-        for (Tarefa tarefa : tarefaSet) {
-            if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
-                tarefaSet.remove(tarefa);
-                System.out.println("Removendo Tarefa: " + tarefa);
-                break;
+        boolean tarefaNaoEncontrada = true;
+
+        if(!tarefaSet.isEmpty()){
+            for (Tarefa tarefa : tarefaSet) {
+                if(tarefa.getDescricao().equalsIgnoreCase(descricao)){
+                    tarefaSet.remove(tarefa);
+                    System.out.println("Removendo Tarefa: " + tarefa);
+                    tarefaNaoEncontrada = false;
+                    break;
+                }
             }
-        }
+
+            if(tarefaNaoEncontrada)
+            System.out.println("Tarefa não Encontrada");
+
+        }else{
+            System.out.println("Lista Vazia!");
+        }       
+
     }
 
     //exibir tarefa
     public void exibirTarefa(){
-        System.out.println(tarefaSet);
+        if(!tarefaSet.isEmpty()){
+            System.out.println(tarefaSet);
+        }else{
+            System.out.println("Lista Vazia");
+        }
+        
     }
 
     //contar tarefa
