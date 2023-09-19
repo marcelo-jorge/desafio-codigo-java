@@ -61,7 +61,10 @@ public class Produto implements Comparable<Produto>{
         return nome.compareToIgnoreCase(p.getNome());
     }
 
-    class ComparatorPorPreco implements Comparator<Produto>{
+    
+}
+
+class ComparatorPorPreco implements Comparator<Produto>{
 
         @Override
         public int compare(Produto p1, Produto p2) {
@@ -69,4 +72,3 @@ public class Produto implements Comparable<Produto>{
         }
         
     }
-}
