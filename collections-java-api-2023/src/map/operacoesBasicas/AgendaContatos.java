@@ -20,8 +20,10 @@ public class AgendaContatos{
 
     //remove contato
     public void removerContato(String nome){
-        if(!agendaContatoMap.isEmpty()){
-            agendaContatoMap.remove(nome);
+        if(!agendaContatoMap.isEmpty()){         
+            if(agendaContatoMap.remove(nome) == null) {
+                System.out.println("contato não encontrado");
+            }            
         }else{
             System.out.println("Map esta Vazio");
         }
@@ -40,7 +42,7 @@ public class AgendaContatos{
     public Integer pesquisarPorNome(String nome){
         if(!agendaContatoMap.isEmpty()){
             if(agendaContatoMap.get(nome) == null){
-                System.out.println("Nome não encontrado");
+                System.out.println("Nome: "+ nome + " não encontrado");
                 return null;
             }else{
                 return agendaContatoMap.get(nome);
@@ -62,6 +64,20 @@ public class AgendaContatos{
         agendaContatos.adicionarContato("Maria", 1111111);
         agendaContatos.adicionarContato("Camila", 44444);
 
+        System.out.println("Exibindo contatos adicionados no Map");
         agendaContatos.exibirContato();
+
+        agendaContatos.removerContato("Maria");
+        System.out.println("Exibindo contatos Depois de Remover");
+        agendaContatos.exibirContato();
+
+        //pesquisa por nome
+        String nomePesquisa = "João";        
+        System.out.println("Numero de telefone de " + nomePesquisa + ":" + agendaContatos.pesquisarPorNome(nomePesquisa));
+        
+        String nomePesquisaNaoExistente = "Marcelo";        
+        System.out.println("Numero de telefone de " + nomePesquisaNaoExistente + ":" + agendaContatos.pesquisarPorNome(nomePesquisaNaoExistente));
+    
+
     }
 }
