@@ -51,7 +51,20 @@ public class Dicionario {
         dicionario.adicionarPalavra("typescript", "Superset da linguagem JavaScript que adiciona tipagem estática.");
         dicionario.adicionarPalavra("kotlin", "Linguagem moderna de programação para a JVM.");
 
+        // exibir
         dicionario.exibirPalavras();
+
+        //pesquisar
+        String definicaoJava = dicionario.pesquisarPorPalavra("java");
+        System.out.println("Definição da Liguagem 'java': " + definicaoJava);
+
+        String definicaoCSharp = dicionario.pesquisarPorPalavra("csharp");
+        System.out.println("Definição da Liguagem 'C#': " + definicaoCSharp);
+
+        //remover
+        dicionario.removerPalavra("typescript");
+        dicionario.exibirPalavras();
+
     }
 
 }
