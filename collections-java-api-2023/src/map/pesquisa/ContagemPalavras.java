@@ -53,7 +53,18 @@ public class ContagemPalavras {
         contagemPalavras.adicionarPalavras("Python", 8);
         contagemPalavras.adicionarPalavras("JavaScript", 1);
         contagemPalavras.adicionarPalavras("C#", 6);
+        
 
         System.out.println(contagemPalavras.palavras);
+
+        //exibir contagem
+        System.out.println("Existem: " + contagemPalavras.exibirContagemPalavras() + " Palavras no Total.");
+
+        //remover
+        contagemPalavras.removerPalavra("Java");
+        System.out.println("Lista Atualizada: " + contagemPalavras.palavras);
+
+        //exibir contagem mais frequente
+        System.out.println("A Linguagem mais frequente é: " + contagemPalavras.encontrarPalavrasMaisFrequente());
     }
 }
