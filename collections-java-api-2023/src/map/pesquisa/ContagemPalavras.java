@@ -11,7 +11,7 @@ public class ContagemPalavras {
         this.palavras = new HashMap<>();
     }
 
-    public void adcionarPalavras(String linguagem, Integer contagem){
+    public void adicionarPalavras(String linguagem, Integer contagem){
         palavras.put(linguagem, contagem);
     }
 
@@ -46,4 +46,14 @@ public class ContagemPalavras {
         return linguagemMaisFrequente;
     }
     
+    public static void main(String[] args) {
+        ContagemPalavras contagemPalavras = new ContagemPalavras();
+
+        contagemPalavras.adicionarPalavras("Java", 2);
+        contagemPalavras.adicionarPalavras("Python", 8);
+        contagemPalavras.adicionarPalavras("JavaScript", 1);
+        contagemPalavras.adicionarPalavras("C#", 6);
+
+        System.out.println(contagemPalavras.palavras);
+    }
 }
