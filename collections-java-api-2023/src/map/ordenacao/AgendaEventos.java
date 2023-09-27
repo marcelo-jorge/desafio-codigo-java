@@ -44,7 +44,7 @@ public class AgendaEventos{
         }
 
         if(proximoEvento != null){
-            System.out.println("O proximo evento: " + proximoEvento.getNome() + "Acontecera na data: " + proximaData);
+            System.out.println("O proximo evento: " + proximoEvento.getNome() + ", Acontecera na data: " + proximaData);
         }else{
             System.out.println("Não há eventos futuros na agenda.");
         }
