@@ -49,7 +49,22 @@ public class LivrariaOnline {
             livrosOrdenadosPorPreco.put(entry.getKey(), entry.getValue());
         }
 
+        //retorna lista ordenada
         return livrosOrdenadosPorPreco;
+    }
+
+    public Map<String,Livro> exibirLivrosOrdenadosPorAutor(){
+        List<Map.Entry<String,Livro>> livrosParaOrdenarPorAutor = new ArrayList<>(livros.entrySet());
+
+        Collections.sort(livrosParaOrdenarPorAutor, new ComparatorPorAutor());
+
+        Map<String,Livro> livrosOrdenadosPorAutor = new LinkedHashMap<>();
+
+        for(Map.Entry<String,Livro> entry: livrosParaOrdenarPorAutor){
+            livrosOrdenadosPorAutor.put(entry.getKey(), entry.getValue());
+        }
+
+        return livrosOrdenadosPorAutor;
     }
 
     
