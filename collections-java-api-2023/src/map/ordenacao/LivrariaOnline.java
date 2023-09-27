@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 public class LivrariaOnline {
     private Map<String,Livro> livros;
@@ -78,5 +79,31 @@ public class LivrariaOnline {
         }
         return livrosPorAutor;
     }
+
+    public List<Livro> obterLivroMaisCaro(){
+        List<Livro> livrosMaisCaros = new ArrayList<>();
+        double precoMaisAlto = Double.MIN_VALUE;
+
+        if(!livros.isEmpty()){
+            for(Livro livro: livros.values()){
+                if(livro.getPreco() > precoMaisAlto){
+                    precoMaisAlto = livro.getPreco();
+                }
+            }
+        }else{
+         throw new NoSuchElementException("A livraria esta Vazia!");
+        }
+
+        for(Map.Entry<String,Livro> entry: livros.entrySet()){
+            
+            if(entry.getValue().getPreco() == precoMaisAlto){
+                Livro livroComPrecoMaisAlto = livros.get(entry.getKey());
+                livrosMaisCaros.add(livroComPrecoMaisAlto);
+            }    
+
+         }
+        return livrosMaisCaros;
+    }
+
     
 }
