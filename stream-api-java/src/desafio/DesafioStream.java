@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class DesafioStream {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(1,2,3,4,5);
+        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
 
         //Desafio 1 - Mostre a lista na ordem numérica:
         System.out.println("Mostre a lista na ordem numérica:");
@@ -87,6 +87,12 @@ public class DesafioStream {
         System.out.println(numeros.stream().filter(n -> n>=2 && n<=4).collect(Collectors.toList()));
 
         // Desafio 14 - Encontre o maior número primo da lista:
+        System.out.println("Encontre o maior número primo da lista:");
+        System.out.println(numeros.stream()
+                            .filter(n -> (n%2!=0 && n%3!=0) || (n==2 || n==3))
+                            .sorted(Comparator.reverseOrder())
+                            .findFirst()
+                            .orElse(null));
 
         // Desafio 15 - Verifique se a lista contém pelo menos um número negativo:
 
