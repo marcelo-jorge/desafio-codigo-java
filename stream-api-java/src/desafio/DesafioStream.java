@@ -95,6 +95,8 @@ public class DesafioStream {
                             .orElse(null));
 
         // Desafio 15 - Verifique se a lista contém pelo menos um número negativo:
+        System.out.println("Verifique se a lista contém pelo menos um número negativo:");
+        System.out.println(numeros.stream().anyMatch(n -> n<0));
 
         // Desafio 16 - Agrupe os números em pares e ímpares:
 
