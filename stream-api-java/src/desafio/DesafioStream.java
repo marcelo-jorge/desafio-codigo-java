@@ -83,6 +83,8 @@ public class DesafioStream {
         System.out.println(numeros.stream().reduce(1, (n1,n2) -> n1*n2));
 
         // Desafio 13 - Filtrar os números que estão dentro de um intervalo:
+        System.out.println("Filtrar os números que estão dentro de um intervalo: 2 e 4");
+        System.out.println(numeros.stream().filter(n -> n>=2 && n<=4).collect(Collectors.toList()));
 
         // Desafio 14 - Encontre o maior número primo da lista:
 
