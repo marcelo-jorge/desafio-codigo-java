@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class DesafioStream {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,10,15,25);
+        List<Integer> numeros = Arrays.asList(1,2,3,4,5);
 
         //Desafio 1 - Mostre a lista na ordem numérica:
         System.out.println("Mostre a lista na ordem numérica:");
@@ -46,11 +46,11 @@ public class DesafioStream {
                             .skip(1)
                             .findFirst()
                             .orElse(null));
-        System.out.println(numeros.stream()
-                            .sorted()
-                            .distinct()
-                            .collect(Collectors.toList())
-                            .get(numeros.size()-2));
+        // System.out.println(numeros.stream()
+        //                     .sorted()
+        //                     .distinct()
+        //                     .collect(Collectors.toList())
+        //                     .get(numeros.size()-2));
         
         // Desafio 8 - Somar os dígitos de todos os números da lista:
         System.out.println("Somar os dígitos de todos os números da lista:");
@@ -73,5 +73,27 @@ public class DesafioStream {
                     .filter(n -> n%2 != 0)
                     .collect(Collectors.groupingBy(n -> (n%3 == 0) || (n%5 == 0)))
                     );
+        
+        //Desafio 11 - Encontre a soma dos quadrados de todos os números da lista:
+        System.out.println("Encontre a soma dos quadrados de todos os números da lista:");
+        System.out.println(numeros.stream().map(n -> n*n).reduce(0,Integer::sum));
+
+        // Desafio 12 - Encontre o produto de todos os números da lista:
+        System.out.println("Encontre o produto de todos os números da lista:");        
+        System.out.println(numeros.stream().reduce(1, (n1,n2) -> n1*n2));
+
+        // Desafio 13 - Filtrar os números que estão dentro de um intervalo:
+
+        // Desafio 14 - Encontre o maior número primo da lista:
+
+        // Desafio 15 - Verifique se a lista contém pelo menos um número negativo:
+
+        // Desafio 16 - Agrupe os números em pares e ímpares:
+
+        // Desafio 17 - Filtrar os números primos da lista:
+
+        // Desafio 18 - Verifique se todos os números da lista são iguais:
+
+        // Desafio 19 - Encontre a soma dos números divisíveis por 3 e 5:
     }
 }
