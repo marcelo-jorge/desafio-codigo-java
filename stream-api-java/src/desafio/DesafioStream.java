@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class DesafioStream {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(5,5,5,5,5,5);
+        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
         //Desafio 1 - Mostre a lista na ordem numérica:
         System.out.println("Mostre a lista na ordem numérica:");
@@ -125,5 +125,10 @@ public class DesafioStream {
         }
 
         // Desafio 19 - Encontre a soma dos números divisíveis por 3 e 5:
+        System.out.println("Encontre a soma dos números divisíveis por 3 e 5");
+        System.out.println(numeros.stream()
+                            .filter(n -> n%3==0 || n%5==0 || n==3 || n==5)
+                            .reduce(0,Integer::sum)                            
+                            );
     }
 }
