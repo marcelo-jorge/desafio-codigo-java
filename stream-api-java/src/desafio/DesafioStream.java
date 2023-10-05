@@ -99,8 +99,11 @@ public class DesafioStream {
         System.out.println(numeros.stream().anyMatch(n -> n<0));
 
         // Desafio 16 - Agrupe os números em pares e ímpares:
+        System.out.println("Agrupe os números sendo true para Par e false Impar:");        
+        System.out.println(numeros.stream().collect(Collectors.groupingBy(n -> n%2==0)));
 
         // Desafio 17 - Filtrar os números primos da lista:
+        System.out.println("");
 
         // Desafio 18 - Verifique se todos os números da lista são iguais:
 
