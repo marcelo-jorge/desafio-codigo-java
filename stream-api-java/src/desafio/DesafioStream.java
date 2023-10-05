@@ -103,7 +103,12 @@ public class DesafioStream {
         System.out.println(numeros.stream().collect(Collectors.groupingBy(n -> n%2==0)));
 
         // Desafio 17 - Filtrar os números primos da lista:
-        System.out.println("");
+        System.out.println("Filtrar os números primos da lista");
+        System.out.println(numeros.stream()
+                            .filter(n -> (n%2 != 0 && n%3 !=0) || (n==2 || n==3))
+                            .sorted()
+                            .skip(1)
+                            .collect(Collectors.toList()));
 
         // Desafio 18 - Verifique se todos os números da lista são iguais:
 
