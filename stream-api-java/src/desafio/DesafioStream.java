@@ -2,13 +2,15 @@ package desafio;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class DesafioStream {
     public static void main(String[] args) {
-        List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+        List<Integer> numeros = Arrays.asList(5,5,5,5,5,5);
 
         //Desafio 1 - Mostre a lista na ordem numérica:
         System.out.println("Mostre a lista na ordem numérica:");
@@ -111,6 +113,16 @@ public class DesafioStream {
                             .collect(Collectors.toList()));
 
         // Desafio 18 - Verifique se todos os números da lista são iguais:
+        System.out.println("Verifique se todos os números da lista são iguais?");
+        List iguais = (numeros.stream()
+                        .filter(n -> Collections.frequency(numeros, n) > 1)
+                        .collect(Collectors.toList())
+                        );
+        if(numeros.size() == iguais.size()){
+            System.out.println("Todos os numeros da lista são iguais");
+        }else{
+            System.out.println("Existem numeros diferentes na Lista");
+        }
 
         // Desafio 19 - Encontre a soma dos números divisíveis por 3 e 5:
     }
