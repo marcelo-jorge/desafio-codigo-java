@@ -1,5 +1,5 @@
 public interface AparelhoTelefonico {
-    void ligar();
-    void atender();
-    void iniciarCorreioVoz();
+    public void ligar();
+    public void atender();
+    public void iniciarCorreioVoz();
 }
